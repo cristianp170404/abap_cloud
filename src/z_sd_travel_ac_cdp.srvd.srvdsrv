@@ -1,0 +1,5 @@
+@EndUserText.label: 'Services Definition'
+@ObjectModel.leadingEntity.name: 'Z_C_TRAVEL_AC_CDP'
+define service Z_sd_travel_ac_cdp {
+  expose Z_C_TRAVEL_AC_CDP;
+}

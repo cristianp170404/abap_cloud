@@ -1,0 +1,67 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+            typeName: 'Travel ',
+            typeNamePlural: 'Travels',
+            title:{
+                type: #STANDARD,
+                value: 'TravelID'
+            },
+            description: {
+                type: #STANDARD,
+                value: 'TravelID'
+            }
+            }
+annotate entity Z_C_TRAVEL_AC_CDP with
+{
+  @UI.facet: [
+      {
+          id: 'Travel',
+          type: #IDENTIFICATION_REFERENCE,
+          label: 'Travel',
+          position: 10,
+          purpose: #STANDARD
+      }]
+  @UI.hidden: true
+  TravelUuid;
+  @UI: { lineItem: [{ position: 10, importance: #HIGH }],
+            identification: [{ position: 10 }],
+            selectionField: [{ position: 10 }] }
+  TravelId;
+  @UI: { lineItem: [{ position: 20, importance: #HIGH }],
+            identification: [{ position: 20, label: 'Travel ID' }],
+            selectionField: [{ position: 20 }] }
+    @Consumption.valueHelpDefinition: [{ entity: { name: '/DMO/I_Agency_StdVH', element: 'AgencyID' },
+    useForValidation: true  }]  
+  AgencyId;
+  @UI: { lineItem: [{ position: 30, importance: #HIGH }],
+            identification: [{ position: 30 }],
+            selectionField: [{ position: 30 }] }
+  CustomerId;
+  @UI: { lineItem: [{ position: 40, importance: #HIGH }],
+            identification: [{ position: 40 }] }
+  BeginDate;
+  @UI: { lineItem: [{ position: 50, importance: #HIGH }],
+            identification: [{ position: 50 }] }
+  EndDate;
+  @UI: { lineItem: [{ position: 60, importance: #HIGH }],
+            identification: [{ position: 60 }] }
+  BookingFee;
+  @UI: { lineItem: [{ position: 70, importance: #HIGH }],
+            identification: [{ position: 70 }] }
+  TotalPrice;
+  @UI: { lineItem: [{ position: 80, importance: #HIGH }],
+            identification: [{ position: 80 }] }
+  Description;
+  @UI.hidden: true
+  OverallStatus;
+  @UI.hidden: true
+  LocalCreatedBy;
+  @UI.hidden: true
+  LocalCreatedAt;
+  @UI.hidden: true
+  LocalLastChangedBy;
+  @UI.hidden: true
+  LocalLastChangedAt;
+  @UI.hidden: true
+  LastChangedAt;
+}

@@ -1,0 +1,18 @@
+projection;
+strict ( 2 );
+use draft;
+use side effects;
+
+define behavior for Z_C_TRAVEL_AC_CDP //alias <alias_name>
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Resume;
+  use action Discard;
+  use action Prepare;
+}
